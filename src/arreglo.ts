@@ -53,5 +53,17 @@ export class Arreglo {
         });
     }
 
+    public ordernarPorPrecioMenor(platos: Plato[]): Plato[]{
+        return platos.sort((a,b)=>{
+            return a.precio - b.precio;
+        })
+    }
+
+    public ordernarPorPrecioMayor(platos: Plato[]): Plato[]{
+        return platos.sort((a,b)=>{
+            return b.precio - a.precio;
+        })
+    }
+
 
 }

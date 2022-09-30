@@ -19,3 +19,5 @@ console.log(arreglo.ordernardeMayorAMenor([-5, 10, 6, 9]));
 console.log(arreglo.getPrincipal(platos));
 console.log(arreglo.ordenarPorPostre(platos));
 console.log(arreglo.ordenarPorPostreZA(platos));
+console.log(arreglo.ordernarPorPrecioMenor(platos));
+console.log(arreglo.ordernarPorPrecioMayor(platos));
