@@ -1,7 +1,7 @@
 export interface Plato {
     principal: string;
     postre: string;
-    precio:number;
+    precio: number;
 }
 
 export class Arreglo {
@@ -25,7 +25,31 @@ export class Arreglo {
 
     public getPrincipal(platos: Plato[]): any {
         return platos.map((plato: Plato) => {
-            return {principal:plato.principal,postre:plato.principal,precioConIva:plato.precio*1.12};
+            return {postre: plato.postre, precio: plato.precio / 2};
+        });
+    }
+
+    public ordenarPorPostre(platos: Plato[]): Plato[] {
+        return platos.sort((a: Plato, b: Plato) => {
+            if (a.postre > b.postre) {
+                return 1;
+            }
+            if (a.postre < b.postre) {
+                return -1;
+            }
+            return 0;
+        });
+    }
+
+    public ordenarPorPostreZA(platos: Plato[]): Plato[] {
+        return platos.sort((a: Plato, b: Plato) => {
+            if (a.postre < b.postre) {
+                return 1;
+            }
+            if (a.postre > b.postre) {
+                return -1;
+            }
+            return 0;
         });
     }
 
