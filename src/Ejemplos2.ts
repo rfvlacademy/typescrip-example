@@ -52,7 +52,7 @@ export class Ejemplo2 {
     }
 
     ordernarPorDescripcionAZ(productos: Productos[]) {
-        return this.productos.sort((a, b) => {
+        return productos.sort((a, b) => {
             if (a.description > b.description) {
                 return 1;
             }
