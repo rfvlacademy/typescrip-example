@@ -17,7 +17,7 @@ export class Ejemplo2 {
         return this.productos.filter((product) => product.iva === 0);
     }
 
-    obtenerProductosConIva12() {
+    private obtenerProductosConIva12() {
         return this.productos.filter((product) => product.iva === 12);
     }
 
@@ -25,7 +25,8 @@ export class Ejemplo2 {
         return this.productos.filter((producto) => producto.description.includes(descripcion));
     }
 
-    calcularPrecioConIva(productos: Productos[]) {
+    calcularPrecioConIva12() {
+        let productos = this.obtenerProductosConIva12();
         return productos.map((producto) => {
             return {
                 name: producto.name,
@@ -34,6 +35,31 @@ export class Ejemplo2 {
                 precio: producto.precio * ((100 + producto.iva) / 100),
                 iva: producto.iva
             };
+        });
+    }
+
+    calcularIva12() {
+        return this.obtenerProductosConIva12().map((producto) => {
+            let ivaCalc = producto.precio * (producto.iva / 100);
+            return {
+                name: producto.name,
+                codigo: producto.codigo,
+                description: producto.description,
+                precio: producto.precio,
+                iva: ivaCalc
+            };
+        });
+    }
+
+    ordernarPorDescripcionAZ(productos: Productos[]) {
+        return this.productos.sort((a, b) => {
+            if (a.description > b.description) {
+                return 1;
+            }
+            if (a.description < b.description) {
+                return -1;
+            }
+            return 0;
         });
     }
 

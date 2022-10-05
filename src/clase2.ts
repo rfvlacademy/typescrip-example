@@ -4,7 +4,7 @@ let productos: Productos[] = [
     {
         name: 'billetera',
         codigo: '1',
-        description: '',
+        description: 'negro',
         precio: 10.99,
         iva: 12
     },
@@ -18,8 +18,12 @@ let productos: Productos[] = [
 ];
 
 let ejemplo2 = new Ejemplo2(productos);
-let productosConIva12 = ejemplo2.obtenerProductosConIva12();
-console.log(ejemplo2.obtenerProductosConIva0());
-console.log(productosConIva12);
 console.log(ejemplo2.filtrarPorDescripcion('blanco'));
-console.log(ejemplo2.calcularPrecioConIva(productosConIva12));
+let productoConIva = ejemplo2.calcularPrecioConIva12();
+let productosConIvaO = ejemplo2.obtenerProductosConIva0();
+console.log('iva12', productoConIva);
+console.log('iva0', productosConIvaO);
+let unidos = productoConIva.concat(productosConIvaO);
+console.log('unidos', unidos);
+console.log('ordenado', ejemplo2.ordernarPorDescripcionAZ(unidos));
+console.log(ejemplo2.calcularIva12());
