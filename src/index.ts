@@ -6,11 +6,17 @@ function printNumbers(numbers: number[]): void {
     numbers.forEach((number: number, index: number) => console.log(index, number));
 }
 
-let platos: Plato[] = [{principal: 'hamburguesa', postre: 'torta', precio: 10.5}, {
-    principal: 'pizza',
-    postre: 'helado',
-    precio: 12.5
-}];
+let platos: Plato[] = [
+    {
+        principal: 'hamburguesa',
+        postre: 'torta',
+        precio: 10.5
+    },
+    {
+        principal: 'pizza',
+        postre: 'helado',
+        precio: 12.5
+    }];
 
 const arreglo = new Arreglo(numbers);
 printNumbers(numbers);

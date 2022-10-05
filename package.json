@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "clase2": "ts-node src/clase2.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
