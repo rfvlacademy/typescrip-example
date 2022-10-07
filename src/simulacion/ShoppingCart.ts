@@ -1,6 +1,6 @@
 import {ProductModel} from './product.model';
 
-export class Product {
+export class ShoppingCart {
     private products: ProductModel[];
 
     constructor(products: ProductModel[]) {
@@ -19,11 +19,12 @@ export class Product {
     private addDiscount(discount: number): ProductModel[] {
         this.orderProductByPrice();
         return this.products.map((product) => {
+            let newPrice = product.price - discount;
             return {
                 name: product.name,
                 code: product.code,
                 description: product.description,
-                price: product.price - discount
+                price: newPrice
             };
         });
     }
