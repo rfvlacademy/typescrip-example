@@ -8,7 +8,7 @@ let products: ProductModel[] = [
 ];
 
 const product: Product = new Product(products);
-// el descuento tiene que ser de 30 para
+// el descuento tiene que ser de 30$ para todo los productos
 // imprimir el resultado entregado por el metodo getProductsUnder50
 // el metodo addDiscount tiene que utilizar el arreglo devuelto por el metodo orderProductByPrice
 // el metodo getProductsUnder50 tiene que utilizar el arreglo devuelto por el metodo addDiscount
