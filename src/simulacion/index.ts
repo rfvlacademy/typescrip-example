@@ -14,3 +14,4 @@ const product: Product = new Product(products);
 // el metodo getProductsUnder50 tiene que utilizar el arreglo devuelto por el metodo addDiscount
 // el unico metodo publico es getProductsUnder50 los dos otros metodos son private asta finalizar el codigo
 // todo los metodos puede ser publicos para que puedan verificar si los metodos esta desarrollados de forma correcta.
+console.log(product.getProductsUnder50());

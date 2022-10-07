@@ -9,14 +9,28 @@ export class Product {
 
 
     /** Esta función deve devolver ordenados los productos de forma descendente mediante el precio(usar sort)*/
-    orderProductByPrice() {
+    private orderProductByPrice(): void {
+        this.products.sort((a, b) => {
+            return a.price - b.price;
+        });
     }
 
     /** Esta función deve aplicar el descuento a los prodyctos modificando el precio (usar map)*/
-    addDiscount(discount: number) {
+    private addDiscount(discount: number): ProductModel[] {
+        this.orderProductByPrice();
+        return this.products.map((product) => {
+            return {
+                name: product.name,
+                code: product.code,
+                description: product.description,
+                price: product.price - discount
+            };
+        });
     }
 
     /** Esta función deve devolver los productos que su precio sea menor de 50 (usar filter)*/
-    getProductsUnder50() {
+    getProductsUnder50(): ProductModel[] {
+        let products = this.addDiscount(30);
+        return products.filter(product => product.price < 50);
     }
 }
