@@ -7,6 +7,7 @@
     "start": "ts-node src/index.ts",
     "clase2": "ts-node src/clase2.ts",
     "simulacion": "ts-node src/simulacion/index.ts",
+    "simulacion2": "ts-node src/simulacion2/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
