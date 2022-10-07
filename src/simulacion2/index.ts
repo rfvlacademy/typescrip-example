@@ -8,3 +8,4 @@ let products: ProductModel[] = [
 ];
 
 const item: Item = new Item(products);
+console.log(item.productOver100Price());
